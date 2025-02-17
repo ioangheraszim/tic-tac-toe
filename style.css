@@ -1,7 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  --dark-blue: #192A32;
+  --lighter-blue: #1F3540;
+  --player-blue: #31C4BE;
+  --score-grey: #A9BEC9;
+  --cpu-yellow: #F2B237;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: var(--dark-blue);
+  font-family: "Roboto Mono", serif;
+}
+
+.container {
+  width: min(100% - 1rem, 375px);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header-container {
+  padding: .5rem;
+}
+
+.header-container, .turn, .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.logo .fa-xmark {
+  color: var(--player-blue);
+  padding: .2rem;
+}
+
+.logo .fa-o {
+  color: var(--cpu-yellow);
+  font-size: 1.7rem;
+}
+
+.turn {
+  color: var(--score-grey);
+}
+
+.turn__mark {
+  font-size: 2rem;
+  margin-right: .5rem;
+}
+
+.reset-button {
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  padding: .25rem .5rem;
+  border-radius: 5px;
+  background-color: var(--score-grey);
+  box-shadow: 0 1px 0px 0px var(--player-blue);
+  cursor: pointer;
+}
+
+.reset-button:active {
+  transform: scale(.8)
+}
+
+.squares-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: var(--lighter-blue);
+  border-radius: 5px;
+  box-shadow: 0 5px 0px 0px black;
+}
+
+.square:hover {
+  cursor: pointer;
+}
+
+.score-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.score-container .ties, .score-container .player, .score-container .CPU {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 0px 0px black;
+  text-align: center;
+}
+
+.player {
+  background-color: var(--player-blue);
+}
+
+.ties {
+  background-color: var(--score-grey);
+}
+
+.CPU {
+  background-color: var(--cpu-yellow);
+}
+
+.thick {
+  font-size: 1.5rem;
+  font-weight: 700;
 }

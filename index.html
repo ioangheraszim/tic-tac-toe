@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    <h1>Tic Tac Toe - boiletplate (will be modified later)</h1>
+    <main class="container">
+        <div class="header-container">            
+            <div class="logo-container">
+                <p class="logo"><i class="fa-solid fa-xmark"></i><span class="logo-o"><i class="fa-solid fa-o"></i></span></p>
+            </div>
+            <div class="turn">
+                <p class="turn__mark"><i class="fa-solid fa-xmark"></i></p>
+                <p class="turn__text">Turn</p>
+            </div>
+            <button class="reset-button"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+        </div>
+        <div class="squares-container">
+           <div class="square"></div>
+           <div class="square"></div>
+           <div class="square"></div>
+           <div class="square"></div>
+           <div class="square"></div>
+           <div class="square"></div>
+           <div class="square"></div>
+           <div class="square"></div>
+           <div class="square"></div>
+        </div>
+        <div class="score-container">
+            <div class="player">
+                <p>X(YOU)</p>
+                <p class="thick">0</p>
+            </div>
+            <div class="ties">
+                <p>TIES</p>
+                <p class="thick">0</p>
+            </div>
+            <div class="CPU">
+                <p>O(CPU)</p>
+                <p class="thick">0</p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
